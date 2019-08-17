@@ -11,9 +11,15 @@ public class Knight {
     private String name = "Lancelot";
     //@Value("29")
     private int age = 29;
+
     private Quest quest;
 
     public Knight() {
+    }
+
+    public Knight(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     /*   public Knight(String name, int age,Quest quest) {

@@ -18,12 +18,18 @@ public class Castle {
     @Value("${my.castle.name:East Watch}")
     private String name; // = "East Watch";
 
-
     Knight knight;
 
     @Autowired
     public Castle(Knight knight) {
         this.knight = knight;
+    }
+
+    //Typ konstruktora domyślny - widoczny tylko dla klas w tej samej paczce
+
+    Castle(Knight knight,String name) {
+        this.knight = knight;
+        this.name = name;
     }
 
     //ma się wykonać po tym jak Spring zostanie utworzony
